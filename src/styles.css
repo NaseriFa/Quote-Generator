@@ -1,0 +1,233 @@
+/* General Reset */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  /* horizontally center */
+  align-items: center;
+  /* vertically center */
+  font-family: "Courgette", "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header */
+header h1 {
+  color: rgb(157, 129, 48);
+  line-height: 1.5;
+  font-size: 45px;
+  font-weight: 700;
+ text-shadow: 5px 5px 5px rgba(157, 129, 48,0.3);
+}
+
+/* Main container */
+.container {
+  text-align: center;
+}
+
+/* Quote container */
+.quote-container {
+  max-width: 600px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(157, 129, 48);
+  border-radius: 25px;
+  padding: 40px 25px;
+  margin: 45px auto;
+  /* spacing between elements */
+}
+
+.hidden {
+  display: none;
+}
+
+#quote {
+  font-size: 25px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Form */
+.form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#subject-field {
+  padding: 20px 12px;
+  width: 400px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  color: rgb(157, 129, 48);
+  font-family: "Courgette", "Roboto", sans-serif;
+}
+
+#subject-field:focus {
+  outline: 1px solid rgb(157, 129, 48);
+  outline-offset: 2px;
+}
+
+#subject-field::placeholder {
+  color: black;
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: 700;
+  /* corrected from 700px */
+}
+
+#generate-button {
+  padding: 20px 18px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(157, 129, 48);
+  color: white;
+  margin-left: 15px;
+  box-shadow: 5px 5px 15px rgba(157, 129, 48, 0.3);
+  font-family: "Courgette", "Roboto", sans-serif;
+  transition: all 150ms ease-in-out;
+}
+
+#generate-button:hover {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  color: white;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+a {
+  color: rgb(157, 129, 48);
+}
+
+/* Magic pen animation */
+.magic-pen {
+  width: 100px;
+  height: 100px;
+}
+
+.blinker {
+  display: inline-block;
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+/* Stars background */
+.box {
+  position: absolute;
+  /* cover entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* allow clicks through stars */
+}
+
+.box ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.box ul li {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid rgba(157, 129, 48, 0.6);
+  border-left: 0.3em solid transparent;
+  opacity: 0;
+  bottom: 0;
+  animation: animate 15s linear infinite;
+}
+
+.box ul li:before,
+.box ul li:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid rgba(157, 129, 48, 0.6);
+  border-left: 1em solid transparent;
+  top: 0.6em;
+  left: -1em;
+}
+
+.box ul li:before {
+  transform: rotate(-35deg);
+}
+
+.box ul li:after {
+  transform: rotate(35deg);
+}
+
+/* Star animation positions */
+.box ul li:nth-child(1) {
+  left: 10vw;
+  animation-delay: 0s;
+}
+
+.box ul li:nth-child(2) {
+  left: 36vw;
+  animation-delay: 2s;
+}
+
+.box ul li:nth-child(3) {
+  left: 22vw;
+  animation-delay: 4s;
+}
+
+.box ul li:nth-child(4) {
+  left: 56vw;
+  animation-delay: 6s;
+}
+
+.box ul li:nth-child(5) {
+  left: 76vw;
+  animation-delay: 4s;
+}
+
+.box ul li:nth-child(6) {
+  left: 80vw;
+  animation-delay: 8s;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) rotate(0);
+    opacity: 1;
+    bottom: 0;
+  }
+
+  100% {
+    transform: scale(3) rotate(360deg);
+    opacity: 0;
+    bottom: 100vh;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="src/styles.css">
+  <title>AI Quote Generator</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Star background -->
+    <div class="box">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1>AI Quote Generator</h1>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Quote display -->
+      <div class="quote-container hidden">
+        <span id="quote"></span>
+      </div>
+
+      <!-- Form to input topic -->
+      <div class="form-container">
+        <form>
+          <input type="text" placeholder="Enter a topic (e.g., dreams, love, success)" required id="subject-field">
+          <input type="submit" value="Generate" id="generate-button">
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      Coded by
+      <a href="#">Fatima Naseri</a>,
+      open-sourced on
+      <a href="#">GitHub</a>,
+      hosted on
+      <a href="#">Netlify</a>
+    </footer>
+  </div>
+
+  <!-- JS -->
+  <script src="src/index.js"></script>
+</body>
+
+</html>
